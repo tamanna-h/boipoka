@@ -7,7 +7,7 @@ const Book = ({book}) => {
 
     // console.log(data);
     
-    console.log(book);
+    // console.log(book);
     const {bookName, author, bookId, image, rating, category, tags, yearOfPublishing, publisher} = book
     
     return (
@@ -22,7 +22,7 @@ const Book = ({book}) => {
   <div className="card-body">
     <div className='flex gap-10'>
       {
-        tags.map(tag => <span className="badge badge-outline">{tag}</span>)
+        tags.map(tag => <span key={tag} className="badge badge-outline">{tag}</span>)
       }
     </div>
     <h2 className="card-title">
